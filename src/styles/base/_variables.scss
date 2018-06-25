@@ -1,0 +1,54 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+$xl-screen: 1200px;
+
+// Typography
+$base-font-family: 'FilsonSoftStG';
+$heading-font-family: 'PaperCutoutStG';
+
+// Font Sizes
+$base-font-size: 1rem;
+
+// Line height
+$base-line-height: 1.6;
+$heading-line-height: .75;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$turquoise: #218A9C;
+
+$blue: #3FCDDA;
+$red: #F62B1F;
+$yellow: #F5B501;
+$yellow2: darken($yellow,5%);
+
+$black: #222222;
+$light-gray: #D7E6F9;
+$medium-gray: #ccc;
+$dark-gray: #555;
+
+// Font Colors
+$base-font-color: $black;
+$action-color: $yellow;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

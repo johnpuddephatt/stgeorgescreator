@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+%sr-only {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+%padded-container {
+  // border-left: $small-spacing solid white;
+  // border-right: $small-spacing solid white;
+  // @media screen and (min-width: $medium-screen) {
+  //   border-left: $base-spacing solid white;
+  //   border-right: $base-spacing solid white;
+  // }
+  // @media screen and (min-width: $large-screen) {
+  //   border-left: 2 * $base-spacing solid white;
+  //   border-right: 2 * $base-spacing solid white;
+  // }
+  // @media screen and (min-width: $xl-screen) {
+  //   border-left: 3 * $base-spacing solid white;
+  //   border-right: 3 * $base-spacing solid white;
+  // }
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+  @media screen and (min-width: $medium-screen) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+  }
+  @media screen and (min-width: $large-screen) {
+    padding-left: 2 * $base-spacing;
+    padding-right: 2 * $base-spacing;
+  }
+  @media screen and (min-width: $xl-screen) {
+    padding-left: 3 * $base-spacing;
+    padding-right: 3 * $base-spacing;
+  }
+}
+
+.container {
+  // max-width: $large-screen;
+  margin: 0 auto;
+  @extend %padded-container;
+  // padding-left: $base-spacing;
+  // padding-right: $base-spacing;
+}
+
+.container__narrow {
+  max-width: $medium-screen
+}
+
+
+.section {
+  width: 100%;
+  @media screen and (min-width: $medium-screen) {
+    border-left: 2 * $base-spacing solid white;
+    border-right: 2 * $base-spacing solid white;
+  }
+}
+
+.page-content, .post-content {
+  padding: 2 * $base-spacing 0;
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section--page-header, .section--post-header {
+  padding: 2 * $base-spacing 0;
+  .container {
+    min-height: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.page-title, .post-title {
+  font-size: modular-scale(4);
+  margin-bottom: 0;
+}
+
+.page-subtitle {
+  margin-top: $small-spacing;
+  font-size: modular-scale(2);
+}
+
+

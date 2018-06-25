@@ -1,0 +1,152 @@
+#content {
+  border: 1px solid #ddd;
+  box-shadow: #ddd 0 15px 20px -10px;
+  background-color: white;
+  transition: width 200ms, height 200ms;
+  transform: scale(.5);
+  flex: 0 0 auto;
+  &[data-cardformat="web"] {
+    width: 1200px;
+    height: 630px;
+    flex-direction: row;
+    border-left: $base-spacing solid $blue;
+  }
+  &[data-cardformat="print"] {
+    width: 2480px;
+    height: 3508px;
+    flex-direction: column;
+    transform: scale(.15);
+    font-size: modular-scale(4);
+    .card--title {
+      font-size: modular-scale(10);
+      margin-bottom: 3 * $base-spacing;
+    }
+    .card--text {
+      justify-content: flex-start;
+    }
+    .card--description {
+      max-width: 60%;
+    }
+    .card--text--inner {
+      padding: 10 * $base-spacing 6 * $base-spacing;
+    }
+    .card--text--footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      padding: 0 6 * $base-spacing 6 * $base-spacing;
+    }
+    .card--text--footer--text {
+      font-size: modular-scale(2);
+      font-weight: 700;
+    }
+    .card--text--footer--logo {
+      flex: 0 0 auto;
+      width: 30%;
+      padding-left: 3 * $base-spacing;
+      margin-left: auto;
+      svg {
+        display: block;
+      }
+    }
+    .card--text {
+      border-top: 3 * $base-spacing solid $blue;
+    }
+    .card--image-container {
+      flex: 0 0 38%;
+    }
+  }
+  &[data-cardtemplate="course"] {
+    .card--title, .card--text--footer--text, .card--template {
+      color: $red;
+    }
+    // .card--text--footer--logo path {
+    //   fill: $red !important;
+    // }
+    &[data-cardformat="web"] {
+      border-left-color: $red;
+    }
+    &[data-cardformat="print"] {
+      .card--text {
+        border-top-color: $red;
+      }
+    }
+  }
+  &[data-cardtemplate="vacancy"] {
+    .card--title, .card--text--footer--text, .card--template {
+      color: $yellow;
+    }
+    // .card--text--footer--logo path {
+    //   fill: $yellow;
+    // }
+    &[data-cardformat="web"] {
+      border-left-color: $yellow;
+    }
+    &[data-cardformat="print"] {
+      .card--text {
+        border-top-color: $yellow;
+      }
+    }
+  }
+  &.rendering {
+    transform: scale(1);
+  }
+}
+
+.card {
+  display: flex;
+  overflow: hidden;
+}
+
+.card--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  overflow: hidden;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card--text--inner {
+  padding: 1.5 * $base-spacing;
+  overflow: hidden;
+}
+
+.card--template {
+  font-size: modular-scale(3);
+  text-transform: capitalize;
+  margin-bottom: $small-spacing;
+  color: $blue;
+}
+
+.card--image-container {
+  flex: 0 0 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+}
+
+.card--title {
+  font-family: $heading-font-family;
+  color: $blue;
+  line-height: $heading-line-height;
+  font-size: modular-scale(9);
+  text-transform: uppercase;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+  margin-bottom: $base-spacing;
+}
+
+.card--description {
+  font-size: modular-scale(3);
+  font-weight: 700;
+}
+
+.card--text--footer--text {
+  color: $blue;
+}
