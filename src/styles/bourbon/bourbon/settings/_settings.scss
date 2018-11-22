@@ -31,8 +31,8 @@ $_bourbon-defaults: (
   "contrast-switch-dark-color": #000,
   "contrast-switch-light-color": #fff,
   "global-font-file-formats": ("ttf", "woff2", "woff"),
-  "modular-scale-base": 1em,
-  "modular-scale-ratio": $major-third,
+  "modular-scale-base": 1rem,
+  "modular-scale-ratio": $perfect-fourth,
   "rails-asset-pipeline": false,
 );
 

@@ -1,8 +1,9 @@
 {
     "/dist/app.js": "/dist/app.js",
     "/dist/styles/app.css": "/dist/styles/app.css",
-    "/dist/exif.html": "/dist/exif.html",
     "/dist/index.html": "/dist/index.html",
+    "/dist/images/logo-edge-pattern.png": "/dist/images/logo-edge-pattern.png",
+    "/dist/images/logo-edge-pattern.svg": "/dist/images/logo-edge-pattern.svg",
     "/dist/images/stgeorges_logo.svg": "/dist/images/stgeorges_logo.svg",
     "/dist/fonts/Filson_Soft_Bold.ttf": "/dist/fonts/Filson_Soft_Bold.ttf",
     "/dist/fonts/Filson_Soft_Bold.woff": "/dist/fonts/Filson_Soft_Bold.woff",

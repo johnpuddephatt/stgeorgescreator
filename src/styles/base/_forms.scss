@@ -62,6 +62,7 @@ textarea {
 }
 
 select {
+  text-transform: capitalize;
   padding-right: $small-spacing;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIzMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlRyaWFuZ2xlLTEiIGZpbGw9IiNkOWQ4ZDgiIHBvaW50cz0iMTUgMSAyMS4zNTU4MzcxIDEyIDguNjQ0MTYyODUgMTIgIj48L3BvbHlnb24+CiAgICAgICAgPHBhdGggZD0iTTE1LDI5LjExNDg0NzggTDguNTc3ODAzMzgsMTggTDIxLjQyMjE5NjYsMTggTDE1LDI5LjExNDg0NzggTDE1LDI5LjExNDg0NzggWiIgaWQ9IlRyaWFuZ2xlLTEiIGZpbGw9IiNkOWQ4ZDgiPjwvcGF0aD4KPC9zdmc+');
 	background-size: auto 1.25 * $small-spacing;

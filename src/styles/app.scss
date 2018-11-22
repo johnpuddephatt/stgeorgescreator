@@ -5,6 +5,11 @@
 @import 'sidebar';
 @import 'card';
 
+.rendering {
+  position: relative;
+  top: 99999px;
+  left: 99999px;
+}
 
 * {
   box-sizing: border-box;
@@ -26,10 +31,11 @@ img {
 
 main {
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: $dark-gray;
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   width: 77.5%;
+  position: relative;
 }
