@@ -13,12 +13,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.0.1",
     "html2canvas": "^1.0.0-alpha.12",
     "laravel-mix": "^2.1.11",
     "vue": "^2.5.16"
   },
   "dependencies": {
     "@branu-jp/v-drag": "^0.1.0",
+    "canvas-toBlob": "^1.0.0",
+    "file-saver": "^2.0.0",
     "fitty": "^2.2.5",
     "jspdf": "^1.4.1"
   }

@@ -10,9 +10,18 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+mix.setPublicPath('./')
 
-mix.js('src/app.js', 'dist/').sass('src/styles/app.scss', 'dist/styles/').copy('src/*.html', 'dist/').copy('src/images/**', 'dist/images/').copy('src/fonts/**', 'dist/fonts/')
-;
+mix
+  .js('src/app.js', 'dist/')
+  .sass('src/styles/app.scss', 'dist/styles/')
+  .copy('src/*.html', 'dist/')
+  .copy('src/images/**', 'dist/images/')
+  .copy('src/fonts/**', 'dist/fonts/')
+  .browserSync('dist.stgeorges-creator.localhost')
+  .version();
+
+
 
 // Full API
 // mix.js(src, output);

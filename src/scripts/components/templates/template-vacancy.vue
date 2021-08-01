@@ -18,9 +18,17 @@
             id: "vacancyTitle",
             label: 'Vacancy title',
             type: 'text',
+            length: 40,
+            value: '',
+            placeholder: 'e.g. Early years practitioners'
+          },
+          subtitle: {
+            id: "vacancySubtitle",
+            label: 'Vacancy subtitle',
+            type: 'text',
             length: 30,
             value: '',
-            placeholder: 'e.g. Early years assistants'
+            placeholder: 'e.g. Must be level 2 qualified'
           },
           hours: {
             id: "vacancyHours",
@@ -70,9 +78,10 @@
       </div>
       <div class="card--text">
         <div class="card--text--inner">
-          <p class="card--pre-title">We’re looking for:</p>
+
+          <p v-if="fields.title.value != ''" class="card--pre-title">We’re looking for:</p>
           <h1 class="card--title">{{fields.title.value}}</h1>
-          <!-- <p class="card--description">{{fields.description.value}}</p> -->
+          <p v-if="fields.subtitle.value" class="card--description">{{fields.subtitle.value}}</p>
           <ul class="card--list-items">
             <li v-if="fields.hours.value != ''" class="card--list-item card--hours"><strong>Hours:</strong> {{fields.hours.value}}</li>
             <li v-if="fields.pay.value != ''" class="card--list-item card--pay"><strong>Pay:</strong> {{fields.pay.value}}</li>
@@ -81,7 +90,9 @@
         </div>
       </div>
       <div v-if="card.format === 'print'" class="card--text--footer">
-        <p class="card--text--footer--text">For more information please call 01924 369 632 or visit stgeorgeslupset.org.uk</p>
+        <p class="card--text--footer--text">
+          {{card.footer}}
+        </p>
         <div class="card--text--footer--logo">
           <footer-logo v-bind:color="color"/>
         </div>

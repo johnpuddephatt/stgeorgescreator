@@ -88,7 +88,9 @@
         </div>
       </div>
       <div v-if="card.format === 'print'" class="card--text--footer">
-        <p class="card--text--footer--text">For more information please call 01924 369 632 or visit stgeorgeslupset.org.uk</p>
+        <p class="card--text--footer--text">
+          {{ card.footer }}
+        </p>
         <div class="card--text--footer--logo">
           <footer-logo v-bind:color="color"/>
         </div>

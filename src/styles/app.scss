@@ -29,13 +29,20 @@ img {
   max-width: 100%;
 }
 
+#app > div {
+  display: flex;
+  flex-direction: row;
+}
+
 main {
   height: 100vh;
+  width: 50%;
   background-color: $dark-gray;
   display: flex;
   align-items: center;
   justify-content: center;
-  float: left;
-  width: 77.5%;
+  // float: left;
+  // width: 77.5%;
+  flex: 1 1 auto;
   position: relative;
 }

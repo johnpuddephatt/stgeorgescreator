@@ -3,9 +3,10 @@
   background-color: $blue;
   color: white;
   width: 22.5%;
+  min-width: 300px;
   float: left;
   padding: $base-spacing $small-spacing;
-
+  // font-size: modular-scale(-1);
   box-shadow: #333 0 0 15px 0px;
   overflow-y: auto;
 }
@@ -21,15 +22,34 @@
 
 .input-group {
   margin-bottom: $base-spacing;
+
+  label {
+    font-size: modular-scale(0);
+  }
 }
 .radio-group {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: $small-spacing;
 
   label {
     font-weight: 400;
+    font-size: modular-scale(0);
   }
+}
+
+label a {
+  float: right;
+  display: inline-block;
+  color: white;
+  font-size: modular-scale(-1);
+  font-weight: 400;
+}
+
+.radio-option {
+  display: flex;
+  flex-direction: row;
 }
 
 input[type="radio"] {

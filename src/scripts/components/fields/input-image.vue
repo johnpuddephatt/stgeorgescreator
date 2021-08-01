@@ -1,7 +1,8 @@
 <template>
 
   <form class="input-group" enctype="multipart/form-data" novalidate>
-    <label for="imageUpload">Upload image</label>
+    <label for="imageUpload">Upload image <a href="/flickr/album.php?photoset_id=72157699588908032&amp;json=true" target="popup" onclick="window.open('/flickr/album.php?photoset_id=72157699588908032&amp;json=true','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">Open library</a>
+</label>
     <div class="dropbox">
       <input id="imageUpload" class="input-file" type="file" accept="image/*" @change="onFileChanged">
       <p v-if="isInitial">
@@ -11,9 +12,7 @@
         Image selected
       </p>
     </div>
-    <a class="button" href="/flickr/album.php?photoset_id=72157699588908032&amp;json=true" target="popup" onclick="window.open('/flickr/album.php?photoset_id=72157699588908032&amp;json=true','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
-      Open Flickr in Popup
-    </a>
+
     <input id="imageFlickr" type="hidden" @input="onFlickrChanged">
 
   </form>
@@ -36,11 +35,8 @@
         reader.onloadend = function(theFile) {
           var dummyImage = new Image();
           dummyImage.onload = function() {
-            if(this.width < 600) {
-              alert('Selected image is very small. Please find a larger image.')
-            }
-            else if (this.width < 1200) {
-              alert('Selected image is small. It may be okay for screen use but will appear fuzzy when printed. Please find a larger image if possible.')
+            if (this.width < 1000) {
+              alert('Selected image is small. It may appear fuzzy when printed. Please find a larger image if possible.')
             }
           };
           dummyImage.src = theFile.target.result;

@@ -6,6 +6,20 @@
   display: none;
 }
 
+#spinner {
+  animation: rotate 1s infinite linear;
+  transform-origin: center bottom;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .rendering + .loading-spinner {
   display: block;
 }
@@ -67,7 +81,7 @@
       margin-bottom: 4 * $base-spacing;
     }
     .card--pre-title {
-      font-size: modular-scale(7);
+      font-size: modular-scale(6);
       margin-bottom: 2 * $base-spacing;
     }
     .card--text {
@@ -75,15 +89,17 @@
     }
     .card--description {
       font-size: modular-scale(7);
+      margin-top: -2 * $base-spacing;
     }
+
     .card--text--inner {
-      padding: 10 * $base-spacing 6 * $base-spacing;
+      padding: 6 * $base-spacing 4 * $base-spacing;
     }
     .card--text--footer {
       margin-top: auto;
       display: flex;
       flex-direction: row;
-      padding: 0 6 * $base-spacing 6 * $base-spacing;
+      padding: 0 4 * $base-spacing 4 * $base-spacing;
     }
     .card--text--footer--text {
       font-size: modular-scale(5);
@@ -168,11 +184,15 @@
     .card--title, .card--text--footer--text, .card--template, .card--list-item::before  {
       color: $yellow;
     }
+
     // .card--text--footer--logo path {
     //   fill: $yellow;
     // }
     &[data-cardformat="web"], &[data-cardformat="tv"] {
       border-left-color: $yellow;
+      .card--title {
+        font-size: modular-scale(6);
+      }
     }
     &[data-cardformat="print"] {
       .card--text {
@@ -202,8 +222,7 @@
 }
 
 .card--text--inner {
-  padding: 1.5 * $base-spacing;
-  overflow: hidden;
+  padding: $base-spacing;
 }
 
 .card--template {
@@ -231,9 +250,8 @@
   color: $blue;
   line-height: $heading-line-height;
   letter-spacing: 0.01em;
-  font-size: modular-scale(7);
+  font-size: modular-scale(6);
   text-transform: uppercase;
-  overflow: hidden;
   // text-overflow: ellipsis;
   // white-space: nowrap;
   margin-bottom: $small-spacing;
